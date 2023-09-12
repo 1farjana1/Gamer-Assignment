@@ -19,7 +19,7 @@ body {
 
 /* logo-part-starts */
 
-.youtube {
+.red {
     color: red;
 }
 
@@ -48,6 +48,13 @@ body {
 .link-description a {
     margin-left: 10px;
     text-decoration: none;
+    padding-left: 15px;
+}
+
+.link-description a:hover {
+    border-radius: 8px;
+    background: rgba(11, 2, 35, 0.10);
+    padding: 8px;
 }
 
 .btn-pink {
@@ -66,17 +73,10 @@ body {
     background: #4EC5F7;
 }
 
-
-/* .header-description {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 95px;
-    margin-left: 90px;
-    padding-left: 50px;
-    border: 1px solid blue;
+.header {
     background-image: url("../B8A2-Gamer-Zone-main/images/Group\ 14.png");
-} */
+}
+
 .header-info h2 {
     font-weight: 600;
     font-size: 40px;
@@ -113,14 +113,17 @@ body {
 
 /* <!-- gamer-part-starts --> */
 
+.gamer {
+    background: linear-gradient(90deg, rgba(255, 66, 165, 0.03) 13.13%, rgba(255, 66, 165, 0.03) 87.94%);
+}
+
 .gamer-description {
     display: grid;
     grid-template-columns: .75fr .5fr;
     align-items: center;
     justify-content: center;
     text-align: right;
-    /* margin: 4rem 9rem 4rem 5rem; */
-    margin: 64px 100px 64px 70px;
+    margin: 0 100px 64px 70px;
 }
 
 .gamer-description img {
@@ -134,15 +137,55 @@ body {
 .image-direction {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    /* margin: 3rem 9rem; */
     margin: 48px 100px 0px 100px;
     gap: 12px;
 
 }
 
+.top {
+    margin: -50px;
+}
+
+.image-direction img:hover {
+    border-radius: 16px;
+    border: 4px solid rgba(249, 72, 178, 1);
+    width: 99%;
+    filter: brightness(50%);
+    background: blue;
+
+}
+
+.image-direction img:hover+.hidden {
+    visibility: visible;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
 .center {
     text-align: center;
 }
+
+.youtube-center {
+    text-align: center;
+    width: 100%;
+    position: relative;
+    top: -170px;
+}
+
+.position-fix {
+    margin-left: 5px;
+    margin-top: -70px;
+}
+
+.watch-now {
+    color: rgba(249, 72, 178, 1);
+}
+
+/* .image {
+    filter: blur(2px);
+} */
 
 .image-direction img {
     width: 100%;
@@ -152,6 +195,8 @@ body {
 
 
 /* <!-- Play instantly starts --> */
+
+
 
 .position {
     display: block;
@@ -254,23 +299,14 @@ body {
 /* Games part starts */
 
 .games-part {
-    margin: 100px;
+    margin: 70px;
 
 }
 
 .alignment {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 10px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
 
-}
-
-.alignment1 {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    margin: 0px 35px;
 }
 
 .flex2 {
@@ -284,14 +320,25 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 9px;
+    margin-bottom: 10px;
     font-weight: 600;
 }
 
 .flex1 img,
 .flex2 img {
-    width: 25%;
+    width: 20%;
 }
+
+.flex2:hover {
+    border: 2px solid #FF42A5;
+    border-radius: 30px;
+}
+
+.flex1:hover {
+    border: 2px solid #FF42A5;
+    border-radius: 30px;
+}
+
 
 /* footer part starts */
 
@@ -337,4 +384,222 @@ footer {
 
 small {
     color: rgba(255, 255, 255, 0.60);
+}
+
+/* responsive for mobile device */
+
+@media screen and (max-width:767px) {
+
+    body {
+        max-width: 767px;
+    }
+
+    .gamer-container {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .link-description a {
+        text-decoration: none;
+        text-align: center;
+        padding-bottom: 20px;
+    }
+
+
+    .header-description {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .link-description a:hover {
+        border-radius: 8px;
+        background: rgba(11, 2, 35, 0.10);
+        padding: 8px;
+    }
+
+    .header-description img {
+        width: 250%;
+        margin: 30px -210px -100px -210px;
+    }
+
+    .header-info {
+        margin: 10px -100px 50px -100px;
+        padding: 20px 0px 60px 0px;
+        background-image: url("../B8A2-Gamer-Zone-main/images/Group\ 14.png");
+    }
+
+    .gamer-description {
+        display: flex;
+        flex-direction: column;
+        margin: 0px;
+        padding: 0px;
+        text-align: center;
+    }
+
+    .image-direction {
+        display: flex;
+        flex-direction: column;
+        margin: 40px 0px 40px 0px;
+        text-align: center;
+    }
+
+    .center {
+        margin: 40px 0px 20px 0px;
+    }
+
+    .play-instantly-part {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .play-instantly-description {
+        text-align: center;
+        margin: 0px;
+    }
+
+    .image-part {
+        margin: -10px;
+        padding: -30px;
+    }
+
+    .position {
+        display: block;
+        position: relative;
+        top: -80px;
+        left: -50px;
+        width: 40%;
+    }
+
+    .horse-image {
+        width: 80%;
+        margin-top: -50px;
+    }
+
+
+    .careers-part {
+        display: flex;
+        flex-direction: column;
+        padding-left: 10px;
+        color: white;
+        margin-top: 100px;
+        padding: 10px;
+        background: linear-gradient(90deg, #FF42A5 13.13%, #FF42A5 87.94%);
+    }
+
+    .careers-part img {
+        width: 150%;
+        margin-left: -40px;
+        padding: 0;
+    }
+
+    .careers-description {
+        display: flex;
+        gap: 5px;
+    }
+
+    .careers-info {
+        text-align: right;
+    }
+
+    .career h1 {
+        font-weight: 700;
+        font-size: 20px;
+    }
+
+    .careers-description h4 {
+        font-size: 10px;
+    }
+
+    .career p {
+        font-weight: 400;
+        font-size: 10px;
+    }
+
+    .btn-style {
+        border-radius: 48px;
+        background: #FFF;
+        color: #FF42A5;
+        border: none;
+        padding: 17px 30px;
+        font-weight: 600;
+        font-size: 20px;
+        margin-top: 20px;
+        margin-bottom: 30px;
+    }
+
+    .games-part {
+        margin: 100px;
+
+    }
+
+    .alignment {
+        margin: 0px -100px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+
+    }
+
+    .alignment1 {
+        margin: 0px -100px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+
+    }
+
+    .flex1,
+    .flex2 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 600;
+    }
+
+    .flex1 img,
+    .flex2 img {
+        width: 25%;
+    }
+
+    .flex1 p,
+    .flex2 p {
+        font-size: 7px;
+    }
+
+    .flex2:hover {
+        border: 2px solid #FF42A5;
+        border-radius: 30px;
+        color: #FF42A5;
+    }
+
+    .flex1:hover {
+        border: 2px solid #FF42A5;
+        border-radius: 30px;
+        color: #FF42A5;
+    }
+
+    .alignment3 {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        margin: 20px;
+    }
+
+    .alignment4 {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        margin: 10px 70px;
+    }
+
+    .alignment4 div {
+        margin-bottom: 20px;
+    }
+
+    .alignment5 {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        margin: 40px;
+    }
+
+    .alignment5 div {
+        margin-bottom: 20px;
+    }
 }
